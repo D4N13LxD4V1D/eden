@@ -1,6 +1,6 @@
 #import <Window/Window.hh>
 
-#import <Window/AppDelegate.h>
+#import <Window/MacOS/AppDelegate.h>
 
 #import <AppKit/AppKit.h>
 #import <Metal/Metal.h>

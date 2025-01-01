@@ -1,4 +1,4 @@
-#import <Window/ViewDelegate.h>
+#import <Window/MacOS/ViewDelegate.h>
 
 @implementation ViewDelegate
 

@@ -1,4 +1,4 @@
-#import <Window/AppDelegate.h>
+#import <Window/MacOS/AppDelegate.h>
 
 @implementation AppDelegate
 

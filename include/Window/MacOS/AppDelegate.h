@@ -1,4 +1,4 @@
-#import <Window/ViewDelegate.h>
+#import <Window/MacOS/ViewDelegate.h>
 
 #import <AppKit/AppKit.h>
 #import <Metal/Metal.h>
