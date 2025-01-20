@@ -35,7 +35,9 @@ public:
     availableEntities.push_back(*entity);
   }
 
-  inline auto operator[](int entity) -> Entity * { return &entities[entity]; }
+  inline auto operator[](std::size_t entity) -> Entity * {
+    return &entities[entity];
+  }
 
   inline auto size() -> std::size_t { return entities.size(); }
 

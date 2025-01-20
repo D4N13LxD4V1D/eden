@@ -6,6 +6,7 @@ module;
 #include <vector>
 
 export module eden:component;
+
 import :entity;
 
 namespace eden {
@@ -20,7 +21,7 @@ export struct Component {
   size_t size{0};
 };
 
-export struct Components {
+export class Components {
 public:
   template <typename T> auto get(Entity *entity) -> T * {
     auto id = hash<T>();

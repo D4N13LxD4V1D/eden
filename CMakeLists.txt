@@ -1,16 +1,15 @@
 cmake_minimum_required(VERSION 3.31.3 FATAL_ERROR)
-project(eden VERSION 1.0.0)
+project(Eden VERSION 1.0.0)
 
-add_library(eden)
 file(GLOB_RECURSE CXX_SOURCES CONFIGURE_DEPENDS "src/*.cc")
-target_include_directories(eden PUBLIC "include")
-target_sources(eden PUBLIC FILE_SET CXX_MODULES FILES ${CXX_SOURCES})
-target_compile_features(eden PRIVATE cxx_std_23)
 
+add_library(Eden)
+target_sources(Eden PUBLIC FILE_SET CXX_MODULES FILES ${CXX_SOURCES})
+target_compile_features(Eden PUBLIC cxx_std_23)
+
+include(FetchContent)
 if(APPLE)
-    file(GLOB_RECURSE OBJCXX_SOURCES CONFIGURE_DEPENDS "src/*.mm")
-    target_sources(eden PUBLIC ${OBJCXX_SOURCES})
-    target_link_libraries(eden PUBLIC "-framework Cocoa" "-framework Metal" "-framework MetalKit")
+    FetchContent_Declare(metal-cpp GIT_REPOSITORY https://github.com/D4N13LxD4V1D/metal-cpp.git)
+    FetchContent_MakeAvailable(metal-cpp)
+    target_link_libraries(Eden PUBLIC metal-cpp)
 endif()
-
-add_subdirectory(tests)

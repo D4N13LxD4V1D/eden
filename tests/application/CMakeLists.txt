@@ -1,3 +1,0 @@
-add_executable(Application Main.cc)
-target_compile_features(Application PRIVATE cxx_std_23)
-target_link_libraries(Application PRIVATE eden)

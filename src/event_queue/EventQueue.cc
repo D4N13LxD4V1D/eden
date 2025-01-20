@@ -3,6 +3,7 @@ module;
 #include <queue>
 
 export module eden:event_queue;
+
 export import :event;
 
 namespace eden {
